@@ -6,3 +6,4 @@ This file is for the 23-24 software dev school year
 <b>1/8/24</b>; Added Information<br>
 <b>1/8/24</b>; Started Visual Studio Project<br>
 <b>1/11/24/b>; Added "Dex" to github file
+<b>2/8/24<b>; Added assignments from past week
