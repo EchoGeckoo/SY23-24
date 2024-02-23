@@ -118,31 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="2023-roosevelt-dime-uncirculated-obverse-denver-768x768" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2023-roosevelt-dime-uncirculated-obverse-denver-768x768.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1024px-Jefferson-Nickel-Unc-Obv" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1024px-Jefferson-Nickel-Unc-Obv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2000-native-american-one-dollar-uncirculated-obverse-768x768" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2000-native-american-one-dollar-uncirculated-obverse-768x768.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="43616__79364" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\43616__79364.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="51chNpYUTPL._AC_UF1000,1000_QL80_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\51chNpYUTPL._AC_UF1000,1000_QL80_.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Monster_1800X1800_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Monster_1800X1800_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="91NjwbVi0+L._AC_UF1000,1000_QL80_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\91NjwbVi0+L._AC_UF1000,1000_QL80_.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="00028400324205_C1C1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\00028400324205_C1C1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="yoohoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\yoohoo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Leaver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Leaver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

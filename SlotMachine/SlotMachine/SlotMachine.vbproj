@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3CB10C7A-8276-4A9C-B3D3-B3BB6CE2C148}</ProjectGuid>
+    <ProjectGuid>{B04DC70B-CB81-4F31-BFE9-0BCBAA395B18}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>VendingMachine.My.MyApplication</StartupObject>
-    <RootNamespace>VendingMachine</RootNamespace>
-    <AssemblyName>VendingMachine</AssemblyName>
+    <StartupObject>SlotMachine.My.MyApplication</StartupObject>
+    <RootNamespace>SlotMachine</RootNamespace>
+    <AssemblyName>SlotMachine</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>VendingMachine.xml</DocumentationFile>
+    <DocumentationFile>SlotMachine.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>VendingMachine.xml</DocumentationFile>
+    <DocumentationFile>SlotMachine.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -96,10 +96,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ProductControl1.Designer.VB">
-      <DependentUpon>ProductControl1.VB</DependentUpon>
+    <Compile Include="ReelControl.Designer.vb">
+      <DependentUpon>ReelControl.vb</DependentUpon>
     </Compile>
-    <Compile Include="ProductControl1.VB">
+    <Compile Include="ReelControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
@@ -113,8 +113,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductControl1.resx">
-      <DependentUpon>ProductControl1.VB</DependentUpon>
+    <EmbeddedResource Include="ReelControl.resx">
+      <DependentUpon>ReelControl.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -130,31 +130,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\2000-native-american-one-dollar-uncirculated-obverse-768x768.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\51chNpYUTPL._AC_UF1000,1000_QL80_.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1024px-Jefferson-Nickel-Unc-Obv.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2023-roosevelt-dime-uncirculated-obverse-denver-768x768.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\91NjwbVi0+L._AC_UF1000,1000_QL80_.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\00028400324205_C1C1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\43616__79364.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Monster_1800X1800_transparent.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\yoohoo.png" />
+    <None Include="Resources\Leaver.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
