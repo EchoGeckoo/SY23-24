@@ -22,22 +22,26 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ReelControl3 = New SlotMachine.ReelControl()
         Me.ReelControl2 = New SlotMachine.ReelControl()
         Me.ReelControl1 = New SlotMachine.ReelControl()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(12, 12)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 27)
+        Me.Button1.Size = New System.Drawing.Size(75, 24)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "Spin?"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Label1
@@ -66,6 +70,10 @@ Partial Class Form1
         Me.Label3.Size = New System.Drawing.Size(48, 16)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "Label3"
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 2000
         '
         'ReelControl3
         '
@@ -100,11 +108,31 @@ Partial Class Form1
         Me.ReelControl1.spinTime = 2000
         Me.ReelControl1.TabIndex = 3
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(12, 80)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 10
+        Me.Button2.Text = "Dollar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(12, 106)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(38, 16)
+        Me.Label4.TabIndex = 11
+        Me.Label4.Text = "$0.00"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(898, 532)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ReelControl3)
         Me.Controls.Add(Me.ReelControl2)
         Me.Controls.Add(Me.Label3)
@@ -125,4 +153,7 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents ReelControl2 As ReelControl
     Friend WithEvents ReelControl3 As ReelControl
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Label4 As Label
 End Class
