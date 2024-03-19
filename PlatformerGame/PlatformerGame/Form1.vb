@@ -1,7 +1,7 @@
 ﻿Public Class frm2DPlatformer
-    Dim movespeed As Integer = 10
-    Dim isjumping As Boolean
-    Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyDown
+    Dim moveSpeed As Integer = 15
+    Dim isJumping As Boolean
+    Private Sub Frm2DPlatformer_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyDown
         Select Case e.KeyCode
             Case Keys.Right
                 tmrRight.Start()
@@ -9,13 +9,13 @@
                 tmrLeft.Start()
             Case Keys.Up
                 tmrUp.Start()
-                isjumping = True
+                isJumping = True
         End Select
     End Sub
-    Private Sub timerRight_Tick(sender As Object, e As EventArgs) Handles tmrRight.Tick
-        picPlayer.Left += 15
+    Private Sub tmrRight_Tick(sender As Object, e As EventArgs) Handles tmrRight.Tick
+        picPlayer.Left += moveSpeed
     End Sub
-    Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyUp
+    Private Sub Frm2DPlatformer_KeyUp(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyUp
         Select Case e.KeyCode
             Case Keys.Right
                 tmrRight.Stop()
@@ -23,26 +23,29 @@
                 tmrLeft.Stop()
             Case Keys.Up
                 tmrUp.Stop()
-                isjumping = False
+                isJumping = False
         End Select
     End Sub
-    Private Sub timerLeft_Tick(sender As Object, e As EventArgs) Handles tmrLeft.Tick
-        picPlayer.Left -= movespeed
+    Private Sub tmrLeft_Tick(sender As Object, e As EventArgs) Handles tmrLeft.Tick
+        picPlayer.Left -= moveSpeed
     End Sub
-    Private Sub timerUp_Tick(sender As Object, e As EventArgs) Handles tmrUp.Tick
-        picPlayer.Top -= movespeed
+    Private Sub tmrUp_Tick(sender As Object, e As EventArgs) Handles tmrUp.Tick
+        picPlayer.Top -= moveSpeed
     End Sub
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Frm2DPlatformer_Load(sender As Object, e As EventArgs) Handles Me.Load
         tmrGameLogic.Start()
+
     End Sub
-    Private Sub timerGameLogic_Tick(sender As Object, e As EventArgs) Handles tmrGameLogic.Tick
+
+    Private Sub tmrGameLogic_Tick(sender As Object, e As EventArgs) Handles tmrGameLogic.Tick
         If picPlayer.Bounds.IntersectsWith(picGround.Bounds) Then
             tmrGravity.Stop()
         Else
-            If isjumping = False Then
+            If isJumping = False Then
                 tmrGravity.Start()
             End If
         End If
+
         For Each b As Control In Me.Controls
             If TypeOf b Is PictureBox Then
                 If b.Tag = "bound" Then
@@ -52,13 +55,14 @@
                 End If
                 If b.Tag = "win" Then
                     If picPlayer.Bounds.IntersectsWith(b.Bounds) Then
-                        lightPB.Visible = False
+                        mousePictureBox.Visible = False
                     End If
                 End If
             End If
         Next
     End Sub
-    Private Sub timerGravity_Tick(sender As Object, e As EventArgs) Handles tmrGravity.Tick
-        picPlayer.Top += movespeed
+
+    Private Sub tmrGravity_Tick(sender As Object, e As EventArgs) Handles tmrGravity.Tick
+        picPlayer.Top += moveSpeed
     End Sub
 End Class

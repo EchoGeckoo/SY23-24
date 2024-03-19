@@ -32,20 +32,20 @@ Partial Class frm2DPlatformer
         Me.tmrGameLogic = New System.Windows.Forms.Timer(Me.components)
         Me.tmrGravity = New System.Windows.Forms.Timer(Me.components)
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.lightPB = New System.Windows.Forms.PictureBox()
         Me.block1 = New System.Windows.Forms.PictureBox()
         Me.block4 = New System.Windows.Forms.PictureBox()
         Me.block3 = New System.Windows.Forms.PictureBox()
         Me.block2 = New System.Windows.Forms.PictureBox()
+        Me.mousePictureBox = New System.Windows.Forms.PictureBox()
         Me.Mover1 = New PlatformerGame.mover()
         CType(Me.picPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picAir, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picGround, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lightPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.block1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.block4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.block3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.block2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.mousePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'picPlayer
@@ -101,19 +101,10 @@ Partial Class frm2DPlatformer
         Me.TextBox1.Size = New System.Drawing.Size(100, 22)
         Me.TextBox1.TabIndex = 8
         '
-        'lightPB
-        '
-        Me.lightPB.BackColor = System.Drawing.Color.Yellow
-        Me.lightPB.Location = New System.Drawing.Point(703, 50)
-        Me.lightPB.Name = "lightPB"
-        Me.lightPB.Size = New System.Drawing.Size(28, 28)
-        Me.lightPB.TabIndex = 7
-        Me.lightPB.TabStop = False
-        '
         'block1
         '
         Me.block1.BackColor = System.Drawing.SystemColors.ButtonShadow
-        Me.block1.Location = New System.Drawing.Point(302, 308)
+        Me.block1.Location = New System.Drawing.Point(309, 308)
         Me.block1.Name = "block1"
         Me.block1.Size = New System.Drawing.Size(185, 29)
         Me.block1.TabIndex = 6
@@ -150,16 +141,26 @@ Partial Class frm2DPlatformer
         Me.block2.TabStop = False
         Me.block2.Tag = "bound"
         '
+        'mousePictureBox
+        '
+        Me.mousePictureBox.Image = Global.PlatformerGame.My.Resources.Resources.yoohoo
+        Me.mousePictureBox.Location = New System.Drawing.Point(564, 171)
+        Me.mousePictureBox.Name = "mousePictureBox"
+        Me.mousePictureBox.Size = New System.Drawing.Size(100, 116)
+        Me.mousePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.mousePictureBox.TabIndex = 9
+        Me.mousePictureBox.TabStop = False
+        '
         'Mover1
         '
-        Me.Mover1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Mover1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Mover1.interval = 500
-        Me.Mover1.Location = New System.Drawing.Point(363, 405)
+        Me.Mover1.Location = New System.Drawing.Point(357, 220)
         Me.Mover1.Name = "Mover1"
-        Me.Mover1.Size = New System.Drawing.Size(150, 33)
+        Me.Mover1.Size = New System.Drawing.Size(67, 25)
         Me.Mover1.speed = 0
-        Me.Mover1.sprite = Nothing
-        Me.Mover1.TabIndex = 9
+        Me.Mover1.sprite = Me.mousePictureBox
+        Me.Mover1.TabIndex = 10
         '
         'frm2DPlatformer
         '
@@ -167,8 +168,8 @@ Partial Class frm2DPlatformer
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Mover1)
+        Me.Controls.Add(Me.mousePictureBox)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.lightPB)
         Me.Controls.Add(Me.block1)
         Me.Controls.Add(Me.block4)
         Me.Controls.Add(Me.block3)
@@ -181,11 +182,11 @@ Partial Class frm2DPlatformer
         CType(Me.picPlayer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picAir, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picGround, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lightPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.block1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.block4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.block3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.block2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.mousePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -200,10 +201,10 @@ Partial Class frm2DPlatformer
     Friend WithEvents tmrGameLogic As Timer
     Friend WithEvents tmrGravity As Timer
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents lightPB As PictureBox
     Friend WithEvents block1 As PictureBox
     Friend WithEvents block4 As PictureBox
     Friend WithEvents block3 As PictureBox
     Friend WithEvents block2 As PictureBox
+    Friend WithEvents mousePictureBox As PictureBox
     Friend WithEvents Mover1 As mover
 End Class
